@@ -1,0 +1,27 @@
+package threading;
+class Threadpro1 implements Runnable
+{
+	public void run()
+	{
+		try
+		{
+			System.out.println("Thread"+Thread.currentThread().getId()+"Working");
+		}
+		catch(Exception e)
+		{
+			System.out.println(("Exception is Caught"));
+		}
+	}
+}
+public class Thread4 {
+
+	public static void main(String[] args) {
+		int n=8;
+		for(int i=0;i<n;i++)
+		{
+			Thread object =new Thread(new Threadpro1());
+			object.start();
+		}
+	}
+
+}

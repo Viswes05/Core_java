@@ -1,0 +1,17 @@
+package iostreams;
+import java.io.*;
+import java.util.Scanner;
+public class Addnumber {
+
+	public static void main(String[] args) throws IOException {
+		int n=0;
+		File x=new File("d:\\file.txt");
+		Scanner t=new Scanner(x);
+		while(t.hasNext())
+		{
+			n=n+t.nextInt();
+		}
+		System.out.println(n);
+	}
+
+}

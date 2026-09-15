@@ -1,0 +1,40 @@
+package array;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Sort {
+
+	public static void main(String[] args) {
+		int n,t;
+		Scanner s=new Scanner (System.in);
+		System.out.println("Enter the n numbers: ");
+		n=s.nextInt();
+		int a[]=new int[n];
+		for(int i=0;i<n;i++)
+		{
+			System.out.println("Enter the value: ");
+			a[i]=s.nextInt();
+		}
+		System.out.println("Array is: ");
+		System.out.println(Arrays.toString(a));
+		for(int i=0;i<n;i++)
+		{
+			for(int j=i+1;j<n;j++)
+			{
+				if(a[i]>a[j])
+				{
+					t=a[i];
+					a[i]=a[j];
+					a[j]=t;
+				}
+			}
+			
+		}
+		System.out.println("Sorted Array is ");
+		System.out.println(Arrays.toString(a));
+		s.close();
+
+	}
+
+}
